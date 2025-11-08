@@ -81,7 +81,7 @@ export default function RecipeTable({ query }) {
           <CircularProgress />
         </Box>
       )}
-      {recipes.length > 0 ? (
+      {loading === false && recipes.length > 0 ? (
         <DataGrid
           rows={recipes}
           columns={columns}
