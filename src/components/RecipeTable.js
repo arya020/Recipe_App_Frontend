@@ -106,7 +106,7 @@ export default function RecipeTable({ query }) {
           }}
         />
       )}
-      {loading === false && recipes.length == 0(
+      {loading === false && recipes.length === 0(
         <Typography align="top" mt={5}>
           Try fewer words or different cuisine
         </Typography>
