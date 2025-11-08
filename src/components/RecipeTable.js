@@ -33,6 +33,7 @@ export default function RecipeTable({ query }) {
           alt={params.row.name}
           width={60}
           style={{ borderRadius: 6 }}
+          loading="lazy" 
         />
       ),
       sortable: false,
@@ -74,7 +75,7 @@ export default function RecipeTable({ query }) {
   ];
 
   return (
-    <Box sx={{ mt: "90px", height: "80vh", width: "90%", px: 2 }}>
+    <Box sx={{ mt: "90px", width: "100%"}}>
       {loading === true && (
         <Box display="flex" justifyContent="center" alignItems="center" height="100%">
           <CircularProgress />
@@ -86,7 +87,6 @@ export default function RecipeTable({ query }) {
           columns={columns}
           pageSize={10}
           getRowHeight={() => 'auto'}
-          disableRowSelectionOnClick
           initialState={{
             sorting: {
               sortModel: [{ field: "cookTimeMinutes", sort: "asc" }],
@@ -101,6 +101,7 @@ export default function RecipeTable({ query }) {
             backgroundColor: "#fff",
             boxShadow: 3,
             borderRadius: 2,
+            padding: 2,
           }}
         />
       ) : (
