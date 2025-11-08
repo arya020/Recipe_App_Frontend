@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import FetchRecipe from "../api/FetchRecipe";
 import { DataGrid } from "@mui/x-data-grid";
+import loading from '../static/loading.gif';
 import {
   Box,
   CircularProgress,
@@ -78,10 +79,10 @@ export default function RecipeTable({ query }) {
     <Box sx={{ mt: "90px", width: "100%"}}>
       {loading === true && (
         <Box display="flex" justifyContent="center" alignItems="center" height="100%">
-          <CircularProgress />
+          <img src={loading} alt="Loading..." width={200} />
         </Box>
       )}
-      {loading === false && recipes.length > 0 ? (
+      {loading === false && recipes.length > 0 && (
         <DataGrid
           rows={recipes}
           columns={columns}
@@ -104,7 +105,8 @@ export default function RecipeTable({ query }) {
             padding: 2,
           }}
         />
-      ) : (
+      )}
+      {loading === false && recipes.length == 0(
         <Typography align="top" mt={5}>
           Try fewer words or different cuisine
         </Typography>
