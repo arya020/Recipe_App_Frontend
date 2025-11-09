@@ -41,7 +41,7 @@ npm start
 
 ---
 
-## 🧩 Key Features
+## Key Features
 
 * Search and filter recipes.
 * Display recipes in a responsive grid layout.
