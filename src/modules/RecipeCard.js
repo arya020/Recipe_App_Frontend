@@ -22,7 +22,7 @@ export default function RecipeCard({ recipe, onClick, visibleFields }) {
       }}
     >
     
-      <Box sx={{ position: "relative", height: 160, overflow: "hidden" }}>
+      <Box sx={{ position: "relative", height: 160, overflow: "hidden"}}>
         <CardMedia
           component="img"
           image={recipe.image || "https://via.placeholder.com/300x200?text=Recipe"}

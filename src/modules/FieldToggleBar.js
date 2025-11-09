@@ -5,8 +5,7 @@ export default function FieldToggleBar({ visibleFields, handleFieldToggle }) {
   const fieldOptions = [
     { label: "Cuisine", value: "cuisine" },
     { label: "Difficulty", value: "difficulty" },
-    { label: "Cook Time", value: "cookTimeMinutes" },
-    { label: "Rating", value: "rating" }
+    { label: "Cook Time", value: "cookTimeMinutes" }
   ];
 
   return (
