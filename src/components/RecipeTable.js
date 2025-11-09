@@ -20,6 +20,11 @@ export default function RecipeTable({ query }) {
   }, [query]);
 
   const sortedRecipes = [...recipes].sort((a, b) => {
+    if (sortBy === "tags") {
+      const aFirst = (a.tags?.[0] || "").toLowerCase();
+      const bFirst = (b.tags?.[0] || "").toLowerCase();
+      return aFirst.localeCompare(bFirst);
+    }
     if (typeof a[sortBy] === "number") return a[sortBy] - b[sortBy];
     return a[sortBy]?.localeCompare(b[sortBy]);
   });

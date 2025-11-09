@@ -19,7 +19,7 @@ export default function RecipeGrid({
 
   return (
     <>
-    <Box sx={{ width: "100%", mt: 3, p: { xs: 1, sm: 2, md: 3, lg: 5 } }}>
+    <Box sx={{ width: "90%", mt: 3, p: { xs: 1, sm: 2, md: 3, lg: 4 } }}>
       <Stack
         direction="row"
         spacing={2}
@@ -33,7 +33,7 @@ export default function RecipeGrid({
           onChange={(e) => setSortBy(e.target.value)}
           options={[
             { label: "Cook Time", value: "cookTimeMinutes" },
-            { label: "Rating", value: "rating" },
+            { label: "Tags", value: "tags" },
             { label: "Difficulty", value: "difficulty" },
           ]}
         />
@@ -47,6 +47,7 @@ export default function RecipeGrid({
         sx={{
           display: "flex",
           flexWrap: "wrap",
+          overflowX: "hidden",
           gap: 2,
           justifyContent: { xs: "center", sm: "flex-start" },
           pl: { xs: 0.75, sm: 2, md: 3, lg: 5}

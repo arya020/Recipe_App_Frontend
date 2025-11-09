@@ -6,7 +6,7 @@ export default function RecipeCard({ recipe, onClick, visibleFields }) {
     <Card
       onClick={() => onClick(recipe)}
       sx={{
-        width: { xxs: 120, xs: 190, sm: 250, md: 300, lg: 350, xl: 400, }, 
+        width: { xxs: 130, xs: 165, sm: 220, md: 260, lg: 350, xl: 400 },
         height: 320,
         display: "flex",
         flexDirection: "column",
