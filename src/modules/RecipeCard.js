@@ -6,7 +6,7 @@ export default function RecipeCard({ recipe, onClick, visibleFields }) {
     <Card
       onClick={() => onClick(recipe)}
       sx={{
-        width: { xxs: 130, xs: 165, sm: 220, md: 260, lg: 350, xl: 400 },
+        width: { xxs: 120, xs: 165, sm: 220, md: 250, lg: 350, xl: 400 },
         height: 320,
         display: "flex",
         flexDirection: "column",
@@ -22,7 +22,7 @@ export default function RecipeCard({ recipe, onClick, visibleFields }) {
       }}
     >
     
-      <Box sx={{ position: "relative", height: 160, overflow: "hidden"}}>
+      <Box sx={{ position: "relative", height: 500, overflow: "hidden"}}>
         <CardMedia
           component="img"
           image={recipe.image || "https://via.placeholder.com/300x200?text=Recipe"}
