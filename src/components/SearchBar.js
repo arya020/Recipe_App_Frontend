@@ -75,6 +75,7 @@ export default function SearchBar({ query, setQuery }) {
           type="text"
           placeholder="Search recipes..."
           value={query}
+          pattern="[^0-9]+"
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
